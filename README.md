@@ -22,3 +22,6 @@ priority queues. The implementation of a priority queue written by the author is
 
 # How to use
 You can add the four files in the src folder to your project file, then run "main.cpp" and enter the path of the file to be compressed to complete the compression.
+
+# Reference
+https://blog.csdn.net/qq_33724710/article/details/52201777
