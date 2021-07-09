@@ -5,7 +5,7 @@
 #include <queue>
 #include <vector>
 
-/*HuffmanTree结点*/
+
 template <typename T>
 struct HuffmanTreeNode
 {
@@ -22,7 +22,7 @@ struct HuffmanTreeNode
 	HuffmanTreeNode *pParent;
 };
 
-/*比较函数*/
+
 template <typename T>
 struct greater
 {
@@ -32,7 +32,7 @@ struct greater
 	}
 };
 
-/*HuffmanTree*/
+
 template <typename T>
 class HuffmanTree
 {
