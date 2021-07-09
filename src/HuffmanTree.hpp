@@ -133,6 +133,6 @@ private:
 	}
 
 private:
-	HuffmanTreeNode<T>	*pRoot;
-	T					_invalid;
+	HuffmanTreeNode<T>  *pRoot;
+	T		    _invalid;
 };
