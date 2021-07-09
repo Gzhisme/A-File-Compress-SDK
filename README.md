@@ -18,7 +18,7 @@ The compression function is implemented based on the Huffman tree. The so-called
 The final result is the Huffman tree.
 
 # Bottom Layer
-priority queues. The implementation of a priority queue written by the author is in the "bottom".
+The Huffman tree is implemented based on the priority queue. The bottom layer of the priority queue is the heap. The large root heap is used here (small root heap is also possible, only the initialization of Compare in the template needs to be changed). These files are in the "bottom" folder.
 
 # How to use
 You can add the four files in the src folder to your project file, then run "main.cpp" and enter the path of the file to be compressed to complete the compression.
