@@ -5,6 +5,8 @@
 #include <queue>
 #include <vector>
 
+using namespace std;
+
 template <typename T>
 struct HuffmanTreeNode
 {
@@ -49,7 +51,7 @@ public:
 
 	void LevelTraverse()
 	{
-		std::queue<HuffmanTreeNode<T> *> q;
+		queue<HuffmanTreeNode<T> *> q;
 		if (NULL != pRoot)
 			q.push(pRoot);
 
@@ -65,7 +67,7 @@ public:
 				q.push(pCur->pRight);
 		}
 
-		std::cout << std::endl;
+		cout << endl;
 	}
 
 	HuffmanTreeNode<T> * GetRoot()
@@ -96,8 +98,7 @@ private:
 		}
 		else
 		{
-			std::priority_queue<HuffmanTreeNode<T> *, std::vector<HuffmanTreeNode<T>* >, greater<HuffmanTreeNode<T>*> >
-				heap;
+			priority_queue<HuffmanTreeNode<T> *, vector<HuffmanTreeNode<T>* >, greater<HuffmanTreeNode<T>*> > heap;
 
 			for (int i = 0; i < size; ++i)
 			{
@@ -130,6 +131,6 @@ private:
 	}
 
 private:
-	HuffmanTreeNode<T>	*pRoot;
-	T					_invalid;
+	HuffmanTreeNode<T> *pRoot;
+	T _invalid;
 };
