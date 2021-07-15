@@ -1,5 +1,5 @@
-#ifndef _H_PriortyQueue
-#define _H_PriortyQueue
+#ifndef _H_PriorityQueue
+#define _H_PriorityQueue
 
 #include <iostream>
 #include <vector>
@@ -77,11 +77,10 @@ private:
 		int child = root;
 		int parent;
 
-		Compare cmp;
 		while (0 != child)
 		{
 			parent = (child - 1) / 2;
-			if (cmp(_heap[child], _heap[parent]))
+			if (compare(_heap[child], _heap[parent]))
 			{
 				std::swap(_heap[child], _heap[parent]);
 				child = parent;
@@ -97,7 +96,6 @@ private:
 		if (size <= 1)
 			return;
 
-		Compare com;
 		while (root <= size / 2 - 1)
 		{
 			int child = root * 2 + 1;
@@ -105,7 +103,7 @@ private:
 				++child;
 			
 			int parent = (child - 1) / 2;
-			if (com(_heap[child], _heap[parent]))
+			if (compare(_heap[child], _heap[parent]))
 			{
 				std::swap(_heap[child], _heap[parent]);
 				root = child;
@@ -117,6 +115,7 @@ private:
 
 private:
 	std::vector<T> _heap;
+	Compare compare;
 };
 
 template <typename T, typename Compare = less<T> >
@@ -154,5 +153,6 @@ public:
 private:
 	Heap<int, Compare> q;
 };
+
 
 #endif
