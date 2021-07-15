@@ -1,5 +1,5 @@
-#ifndef _H_MaxHeap
-#define _H_MaxHeap
+#ifndef _H_PriortyQueue
+#define _H_PriortyQueue
 
 #include <iostream>
 #include <vector>
