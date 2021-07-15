@@ -12,7 +12,7 @@ MaxHeap::MaxHeap(T* arr, size_t length) {
 	}
 	_CurrentSize = length;
 }
-/*ÏòÉÏµ÷Õû*/
+/*å‘ä¸Šè°ƒæ•´*/
 void MaxHeap::SiftUp(size_t child) {
 	Compare compare;
 	size_t parent = (child - 1) / 2;
@@ -25,7 +25,7 @@ void MaxHeap::SiftUp(size_t child) {
 		else break;
 	}
 }
-/*ÏòÏÂµ÷Õû*/
+/*å‘ä¸‹è°ƒæ•´*/
 void MaxHeap::SiftDown(size_t parent) {
 	Compare compare;
 	size_t child = parent * 2 + 1;
@@ -41,19 +41,19 @@ void MaxHeap::SiftDown(size_t parent) {
 		else break;
 	}
 }
-/*²åÈëÔªËØ*/
+/*æ’å…¥å…ƒç´ */
 void MaxHeap::Push(const T& elem) {
 	_heap.push_back(elem);
 	SiftUp(++_CurrentSize);
 }
-/*É¾³ı×î´óÊı*/
+/*åˆ é™¤æœ€å¤§æ•°*/
 void MaxHeap::Pop() {
 	assert(!_heap.empty());
-	swap(_heap[0], _heap[_CurrentSize]);
+	swap(_heap[0], _heap[_CurrentSize--]);
 	_heap.pop_back();
 	SiftDown(1);
 }
-/*È¡¶Ñ¶¥ÔªËØ*/
+/*å–å †é¡¶å…ƒç´ */
 T& MaxHeap::Top() {
 	assert(!_heap.empty());
 	return _heap[1];
