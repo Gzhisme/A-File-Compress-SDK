@@ -47,5 +47,7 @@ public:
 	void Pop() {};
 
 	T& Top() {};
+	
+};
 
 #endif
